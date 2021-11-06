@@ -52,7 +52,7 @@ def export_file():
 
 def start_chrome():
     #webbrowser.get(f"{chrome_path} %s").open(f"https://{ip}/protect/liveview/", autoraise=True)
-    subprocess.call([f"{chrome_path}", f"https://{ip}/protect/liveview/"])
+    subprocess.Popen([f"{chrome_path}", f"https://{ip}/protect/liveview/"])
     time.sleep(4)
     keyboard.type('thisisunsafe')
     keyboard.press(Key.ctrl_l)
